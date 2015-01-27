@@ -1,4 +1,4 @@
-avalonvideo
+Iu WebSite Branding
 ===========
 
-Repository for Omeka plugin to playback Avalon Video files.
+Repository for Omeka plugin for Indiana University Branding.
