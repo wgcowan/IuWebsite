@@ -5,11 +5,12 @@ class IuWebsitePlugin extends Omeka_Plugin_AbstractPlugin
     protected $_hooks = array('public_head','public_body','public_footer');
 
     function hookpublichead()
-    {
-	include "gwassets/brand/1.x/header-iub.html";
-	
-	queue_css_url("/gwassets/brand/1.x/brand.css");
-    }
+    {		
+		$head_html = file_get_contents('https://assets.iu.edu/brand/2.x/header-iub.html');
+		echo $head_html;
+	?>
+		<link href="https://assets.iu.edu/brand/2.x/brand.css" rel="stylesheet" type="text/css">
+<?php }
 
 function hookpublicbody()
 	{
@@ -17,7 +18,8 @@ function hookpublicbody()
 	
 function hookpublicfooter()
 	{
-		include "gwassets/brand/1.x/footer.html";
+		$foot_html = file_get_contents('https://assets.iu.edu/brand/2.x/footer.html');
+		echo $foot_html;
 ?>
 		<script>
 		var newPrivacyURL = 'http://www.iu.edu/comments/privacy.shtml';
