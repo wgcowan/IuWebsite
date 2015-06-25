@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 IU Website
 ===========
 
 This plugin adds the official IU Header and Footer Branding to an Omeka site.
-
-**Without modifications, this plugin works only on Webserve accounts**.
-
-Steps for set up:
-
-1. in a terminal windows ssh to webserve.iu.edu and login with your Webserve account.
-2. cd (change directory) to your Omeka site such as `cd www/omeka-2.3`.
-3. execute `ln -s /ip/gwassets/wwws gwassets`
-4. exit
 
 Download and install the IU Website plugin.
 
@@ -33,8 +23,4 @@ If you want to change where the Privacy Policy links to:
 
 Since the page layout can vary with each theme, you may need to modify any theme you use to make sure that the current theme does not contain elements that interfere with the IU Brand Header and/or Footer.
 
-Iu WebSite Branding
-
-
 Repository for Omeka plugin for Indiana University Branding.
->>>>>>> fd1ada986da178e5c98bcb64c6f2860fdd1a0e3b
