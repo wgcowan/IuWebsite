@@ -14,6 +14,7 @@ class IuWebsitePlugin extends Omeka_Plugin_AbstractPlugin
 	echo $head_html;
 	?>
 	<link href="https://assets.iu.edu/brand/3.x/brand.css" rel="stylesheet" type="text/css">
+
 <?php }
 
 function hookpublicbody()
