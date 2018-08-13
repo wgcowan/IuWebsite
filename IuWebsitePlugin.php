@@ -1,4 +1,4 @@
-<?php
+<https://assets.iu.edu/brand/3.x/footer.htmlphp
 
 class IuWebsitePlugin extends Omeka_Plugin_AbstractPlugin
 {
@@ -9,7 +9,7 @@ class IuWebsitePlugin extends Omeka_Plugin_AbstractPlugin
 	queue_css_file('brand');	
 	$head_html = file_get_contents('https://assets.iu.edu/brand/3.x/header-iub.html');
 		if ($head_html === false ) {
-			$head_html=file_get_contents('plugins/IuWebsite/views/public/images/head_cached_file.txt');
+			$head_html=file_get_contents('plugins/IuWebsite/views/public/iu_brand/head_cached_file.htm');
 	    }
 	echo $head_html;
 	?>
@@ -26,7 +26,7 @@ function hookpublicfooter()
 		$foot_html = file_get_contents('https://assets.iu.edu/brand/3.x/footer.html');
 		if ($foot_html === false ) {
 			$foot_html=current_url();
-			$foot_html=file_get_contents('plugins/IuWebsite/views/public/images/foot_cached_file.txt').'cached';
+			$foot_html=file_get_contents('plugins/IuWebsite/views/public/iu_brand/foot_cached_file.htm').'cached';
 	    }
 		echo $foot_html;
 ?>
