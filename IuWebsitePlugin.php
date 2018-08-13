@@ -1,5 +1,4 @@
-<https://assets.iu.edu/brand/3.x/footer.htmlphp
-
+<?php
 class IuWebsitePlugin extends Omeka_Plugin_AbstractPlugin
 {
     protected $_hooks = array('public_head','public_body','public_footer');
