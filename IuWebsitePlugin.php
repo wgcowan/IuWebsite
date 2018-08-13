@@ -5,11 +5,16 @@ class IuWebsitePlugin extends Omeka_Plugin_AbstractPlugin
     protected $_hooks = array('public_head','public_body','public_footer');
 
     function hookpublichead()
-    {		
-		$head_html = file_get_contents('https://assets.iu.edu/brand/2.x/header-iub.html');
-		echo $head_html;
+    {	
+	queue_css_file('brand');	
+	$head_html = file_get_contents('https://assets.iu.edu/brand/3.x/header-iub.html');
+		if ($head_html === false ) {
+			$head_html=file_get_contents('plugins/IuWebsite/views/public/images/head_cached_file.txt');
+	    }
+	echo $head_html;
 	?>
-		<link href="https://assets.iu.edu/brand/2.x/brand.css" rel="stylesheet" type="text/css">
+	<link href="https://assets.iu.edu/brand/3.x/brand.css" rel="stylesheet" type="text/css">
+
 <?php }
 
 function hookpublicbody()
@@ -18,7 +23,11 @@ function hookpublicbody()
 	
 function hookpublicfooter()
 	{
-		$foot_html = file_get_contents('https://assets.iu.edu/brand/2.x/footer.html');
+		$foot_html = file_get_contents('https://assets.iu.edu/brand/3.x/footer.html');
+		if ($foot_html === false ) {
+			$foot_html=current_url();
+			$foot_html=file_get_contents('plugins/IuWebsite/views/public/images/foot_cached_file.txt').'cached';
+	    }
 		echo $foot_html;
 ?>
 		<script>
